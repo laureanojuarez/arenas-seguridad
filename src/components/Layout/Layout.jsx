@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "../Header/Header";
 import { useEffect } from "react";
+import { WhatsAppContact } from "../WhatsAppContact";
 
 export function Layout() {
   const { pathname } = useLocation();
@@ -10,10 +11,11 @@ export function Layout() {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-neutral-900">
+    <div className="min-h-screen flex flex-col bg-neutral-900 font-montserrat">
       <Header />
       <main>
         <Outlet />
+        <WhatsAppContact /> 
       </main>
     </div>
   );
